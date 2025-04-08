@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: missaognbot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: "SEU_TOKEN_DO_BOT"
+      - key: TAPE_TOKEN
+        value: "SEU_TOKEN_DO_TAPE"
+      - key: COLLECTION_ID
+        value: "id_colecao_funcionarios"
+      - key: COLLECTION_ID_VIAGENS
+        value: "id_colecao_viagens"
